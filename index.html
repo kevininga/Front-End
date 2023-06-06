@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <title>Document</title>
+    <script defer src="app.js"></script>
+    <title>Team Manager</title>
+    <style>
+        .hidden {
+          display: none;
+        }
+    </style>
 </head>
 <body>
+    <h1>Player Management</h1>
+    <form id="player-form">
+      <input type="text" id="player-name" placeholder="Enter player name">
+      <button type="submit" id="submit-player-button">Add player</button>
+    </form>
+    <ul id="players-list"></ul>
     
-</body>
+    <h1>Team Management</h1>
+    <form id="team-form">
+      <input type="text" id="team-name" placeholder="Enter team name">
+      <button type="submit" id="submit-team-button">Add team</button>
+    </form>
+    <ul id="teams-list"></ul>
+  </body>
 </html>
