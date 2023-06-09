@@ -11,8 +11,11 @@ CRUD Operations:
 -  Create: POST /api/players - Create a new player
 -  Read: GET /api/players - Retrieve all players
 -  Read: GET /api/players/:id - Retrieve a specific player
+- Read: GET /api/players/team/:teamName - Retrieves all players by team name
+- Read: GET /api/players/name/:name - Retrieves a single player by name
 -  Update: PUT /api/players/:id - Update player information
 -  Delete: DELETE /api/players/:id - Delete a player
+-  Delete: DELETE /api/players/name/name: - Delete a player by name
 
 '/api/teams'
 CRUD Operations:
@@ -24,7 +27,6 @@ CRUD Operations:
 
 ## Models
 Player:
-id: Number,
     name: String,
     age: Number,
     number: Number,
@@ -35,11 +37,9 @@ id: Number,
 
 Team:
 team: {
-        id: Number,
         name: String,
     },
     venue: {
-        id: Number,
         name: String,
         city: String,
         capacity: Number,
