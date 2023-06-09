@@ -1,67 +1,76 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"], input[type="number"] {
-    margin: 5px;
-    padding: 10px;
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  button {
-    margin: 5px;
-    padding: 10px;
-    width: 100%;
-    max-width: 500px;
-    background-color: #4CAF50; /* Green */
-    color: white;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    body {
-      padding: 20px;
-    }
-    input[type="text"], input[type="number"] {
-      width: 100%;
-    }
-    button {
-      width: 100%;
-    }
-    li {
-      width: 100%;
-    }
-  }
-  
+body {
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* changed the font here */
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+}
+
+.team {
+  background: #ffffff;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;  /* added this line */
+}
+
+.team-name {
+  font-size: 1.2em;
+  color: #333;
+  cursor: pointer;
+}
+
+.team-players {
+  margin-top: 0.5em;
+  display: none; /* This will hide the players initially */
+}
+
+.team-players.active {
+  display: block; /* This will show the players when a team is clicked */
+}
+
+.player {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+}
+
+.player:last-child {
+  border-bottom: none;
+}
+
+form {
+  background: #ffffff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;  /* added this line */
+}
+
+form input, form button {
+  width: 100%;
+  padding: 1em;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: #5cb85c;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #449d44;
+}

@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-    <title>Team Manager</title>
-    <style>
-        .hidden {
-          display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Premier League</title>
 </head>
 <body>
-    <h1>Player Management</h1>
-    <form id="player-form">
-      <input type="text" id="player-name" placeholder="Enter player name">
-      <button type="submit" id="submit-player-button">Add player</button>
-    </form>
-    <ul id="players-list"></ul>
-    
-    <h1>Team Management</h1>
-    <form id="team-form">
-      <input type="text" id="team-name" placeholder="Enter team name">
-      <button type="submit" id="submit-team-button">Add team</button>
-    </form>
-    <ul id="teams-list"></ul>
-  </body>
+  <div class="header">
+    <h1>Premier League 22/23</h1>
+  </div>
+
+  <div id="players"></div>
+
+  <div class="form-container">
+    <div class="form-wrapper">
+      <h2>Add Player</h2>
+      <form id="addPlayerForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="number" id="age" placeholder="Age" required />
+        <input type="number" id="number" placeholder="Number" required />
+        <input type="text" id="position" placeholder="Position" required />
+        <input type="text" id="teamName" placeholder="Team Name" required />
+        <button type="submit">Add Player</button>
+      </form>
+    </div>
+    <div class="form-wrapper">
+      <h2>Update Player</h2>
+      <form id="updatePlayerForm">
+        <input type="text" id="updateName" placeholder="Name" required />
+        <input type="number" id="updateAge" placeholder="New Age" />
+        <input type="number" id="updateNumber" placeholder="New Number" />
+        <input type="text" id="updatePosition" placeholder="New Position" />
+        <input type="text" id="updateTeamName" placeholder="New Team Name" />
+        <button type="submit">Update Player</button>
+      </form>
+    </div>
+    <div class="form-wrapper">
+      <h2>Delete Player</h2>
+      <form id="deletePlayerForm">
+        <input type="text" id="deleteName" placeholder="Name" required />
+        <button type="submit">Delete Player</button>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
